@@ -1,0 +1,11 @@
+// Importación de parciales
+@import 'base/variables';
+@import 'components/place-card';
+
+// Estilos globales básicos
+body {
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

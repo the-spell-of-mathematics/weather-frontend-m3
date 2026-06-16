@@ -1,0 +1,29 @@
+// Mixin para reutilizar el efecto hover
+@mixin hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+}
+
+// Bloque principal usando metodología BEM (.bloque__elemento)
+.place-card {
+    @include hover-effect;
+    border: none;
+    border-radius: $card-radius;
+
+    &__icon {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__title {
+        color: $primary-color;
+    }
+
+    &__temp {
+        font-size: 2.5rem;
+        color: $text-color;
+    }
+}
